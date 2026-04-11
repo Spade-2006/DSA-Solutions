@@ -23,7 +23,86 @@ https://www.geeksforgeeks.org/problems/reverse-an-array/1
 2. Finad max and min in array
 https://www.geeksforgeeks.org/problems/find-minimum-and-maximum-element-in-an-array4428/1
 
+3. Find the "Kth" min element of an array
+https://www.geeksforgeeks.org/problems/kth-smallest-element5635/1
 
+4. Given an array which consists of only 0, 1 and 2. Sort the array without using any sorting algo
+https://leetcode.com/problems/sort-colors/description/
+
+5. Move all the negative elements to one side of the array
+https://leetcode.com/problems/rearrange-array-elements-by-sign/
+
+6. Intersection of Two Arrays
+https://leetcode.com/problems/intersection-of-two-arrays/description/
+
+7.  Rotate Array
+https://leetcode.com/problems/rotate-array/description/
+
+8. Maximum Subarray
+https://leetcode.com/problems/maximum-subarray/description/
+
+9. Smallest Range II
+https://leetcode.com/problems/smallest-range-ii/description/
+
+10.Jump Game II
+https://leetcode.com/problems/jump-game-ii/description/
+
+11. Find the Duplicate Number
+https://leetcode.com/problems/find-the-duplicate-number/description/
+
+12. Merge Sorted Array
+https://leetcode.com/problems/merge-sorted-array/description/
+
+13. Next Permutation
+https://leetcode.com/problems/next-permutation/description/
+
+14. Best Time to Buy and Sell Stock
+https://leetcode.com/problems/best-time-to-buy-and-sell-stock/description/
+
+15. Count Inversions
+https://www.geeksforgeeks.org/problems/inversion-of-array-1587115620/1
+
+16. Two Sum
+https://leetcode.com/problems/two-sum/
+
+17. Common in 3 Sorted Arrays
+https://www.geeksforgeeks.org/problems/common-elements1132/1
+
+18. Rearrange the array in alternating positive and negative items with O(1) extra space
+https://leetcode.com/problems/rearrange-array-elements-by-sign/
+
+19. Subarray Sum Equals K
+https://leetcode.com/problems/subarray-sum-equals-k/description/
+
+20.  Maximum Product Subarray
+https://leetcode.com/problems/maximum-product-subarray/description/
+
+21. Given an array of size n and a number k, fin all elements that appear more than " n/k " times.
+https://leetcode.com/problems/majority-element/
+
+22. Find whether an array is a subset of another array
+https://www.geeksforgeeks.org/problems/array-subset-of-another-array2317/1
+
+23. Find the triplet that sum to a given value
+https://leetcode.com/problems/3sum/description/
+
+24. Chocolate Distribution Problem
+https://www.geeksforgeeks.org/problems/chocolate-distribution-problem3825/1
+
+25. Smallest Subarray with sum greater than a given value
+https://leetcode.com/problems/minimum-size-subarray-sum/description/
+
+26. Three way partitioning of an array around a given value
+https://leetcode.com/problems/sort-colors/
+
+27. Minimum Swaps to Group All 1's Together
+https://leetcode.com/problems/minimum-swaps-to-group-all-1s-together-ii/
+
+28. Palindromic Array
+https://www.geeksforgeeks.org/problems/palindromic-array-1587115620/1
+
+29. Median of two sorted arrays o equal size
+https://www.geeksforgeeks.org/problems/median-of-2-sorted-arrays-of-same-size/1
 
 
 ## 🧠 Goal
