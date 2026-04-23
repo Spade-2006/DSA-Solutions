@@ -113,6 +113,12 @@ https://leetcode.com/problems/spiral-matrix/description/
 32. Median in a rowwise sorted MAtrix
 https://www.geeksforgeeks.org/problems/median-in-a-row-wise-sorted-matrix1527/1
 
+33. Row with maximum number od 1's
+https://leetcode.com/problems/row-with-maximum-ones/description/
+
+34. Kth Smallest Element in a Sorted Matrix
+https://leetcode.com/problems/kth-smallest-element-in-a-sorted-matrix/description/
+
 
 ## 🧠 Goal
 
