@@ -44,7 +44,7 @@ https://leetcode.com/problems/maximum-subarray/description/
 9. Smallest Range II
 https://leetcode.com/problems/smallest-range-ii/description/
 
-10.Jump Game II
+10. Jump Game II
 https://leetcode.com/problems/jump-game-ii/description/
 
 11. Find the Duplicate Number
@@ -104,6 +104,15 @@ https://www.geeksforgeeks.org/problems/palindromic-array-1587115620/1
 29. Median of two sorted arrays o equal size
 https://www.geeksforgeeks.org/problems/median-of-2-sorted-arrays-of-same-size/1
 
+30.Median of two sorted arrays of diffrrent size
+https://leetcode.com/problems/median-of-two-sorted-arrays/description/
+
+31.Spiral Traversal of a Matrix
+https://leetcode.com/problems/spiral-matrix/description/
+
+32. Median in a rowwise sorted MAtrix
+https://www.geeksforgeeks.org/problems/median-in-a-row-wise-sorted-matrix1527/1
+
 
 ## 🧠 Goal
 
@@ -116,7 +125,7 @@ https://www.geeksforgeeks.org/problems/median-of-2-sorted-arrays-of-same-size/1
 ## ⚡ Progress Tracker
 
 * Total Questions: 500
-* Solved: X / 500
+* Solved: 29 / 500
 * Consistency > Motivation 💯
 
 ---
