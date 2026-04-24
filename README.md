@@ -119,6 +119,14 @@ https://leetcode.com/problems/row-with-maximum-ones/description/
 34. Kth Smallest Element in a Sorted Matrix
 https://leetcode.com/problems/kth-smallest-element-in-a-sorted-matrix/description/
 
+35. Maximal Rectangle
+https://leetcode.com/problems/maximal-rectangle/description/
+
+36. Search in 2D matrix
+https://leetcode.com/problems/search-a-2d-matrix/
+
+37. Rotate matrix by 90 degrees
+
 
 ## 🧠 Goal
 
