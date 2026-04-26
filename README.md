@@ -126,7 +126,37 @@ https://leetcode.com/problems/maximal-rectangle/description/
 https://leetcode.com/problems/search-a-2d-matrix/
 
 37. Rotate matrix by 90 degrees
+https://leetcode.com/problems/rotate-image/description/
 
+38. Kth Smallest Number in Multiplication Table
+https://leetcode.com/problems/kth-smallest-number-in-multiplication-table/
+
+39. Common elements in all rows of a given matrix
+https://www.geeksforgeeks.org/dsa/common-elements-in-all-rows-of-a-given-matrix/
+
+40. First Unique Character in a string
+https://leetcode.com/problems/first-unique-character-in-a-string/description/
+
+41. Permutations of a String
+https://www.geeksforgeeks.org/problems/permutations-of-a-given-string2041/1
+
+42. Count of number of given string in 2D character array
+https://www.geeksforgeeks.org/problems/count-occurences-of-a-given-word-in-a-2-d-array/1
+
+43. Group Anagrams
+https://leetcode.com/problems/group-anagrams/description/
+
+44. Remove All Adjacent Duplicates In String
+https://leetcode.com/problems/remove-all-adjacent-duplicates-in-string/description/
+
+45. Find first and last positions of an element in a sorted array
+https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/description/
+
+46. Find a Fixed Point (Value equal to index) in a given array
+https://www.geeksforgeeks.org/problems/value-equal-to-index-value1330/1
+
+47. Search in a Rotated Sorted Array
+https://leetcode.com/problems/search-in-rotated-sorted-array/description/
 
 ## 🧠 Goal
 
