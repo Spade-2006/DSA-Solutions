@@ -164,6 +164,17 @@ https://www.geeksforgeeks.org/dsa/maximum-and-minimum-in-an-array/
 49. find four elements that sum to a given value
 https://leetcode.com/problems/4sum/
 
+50. Majority Element II
+https://leetcode.com/problems/majority-element-ii/description/
+
+51. Triplets With Smaller sum
+https://www.geeksforgeeks.org/problems/count-triplets-with-sum-smaller-than-x5549/1
+
+52. Merge Sorted Array
+https://leetcode.com/problems/merge-sorted-array/description/
+
+
+
 
 
 ## 🧠 Goal
