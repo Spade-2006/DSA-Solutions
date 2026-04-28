@@ -158,8 +158,15 @@ https://www.geeksforgeeks.org/problems/value-equal-to-index-value1330/1
 47. Search in a Rotated Sorted Array
 https://leetcode.com/problems/search-in-rotated-sorted-array/description/
 
-## 🧠 Goal
+48. Maximum and minimum of an array using minimum number of comparisons
+https://www.geeksforgeeks.org/dsa/maximum-and-minimum-in-an-array/
 
+49. find four elements that sum to a given value
+https://leetcode.com/problems/4sum/
+
+
+
+## 🧠 Goal
 * Complete all problems ✔️
 * Strengthen pattern recognition 🧩
 * Crack top tech interviews 💼
