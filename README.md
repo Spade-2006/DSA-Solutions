@@ -5,13 +5,6 @@ This repo contains my solutions to DSA problems organized **pattern-wise** for s
 
 ---
 
-## 📥 Download DSA Sheet
-
-👉 [Download My Pattern-Wise DSA Sheet](./Pattern_Wise_DSA_Sheet_500.csv)
-
----
-
-
 
 ## 📘 Problem List
 
@@ -172,6 +165,15 @@ https://www.geeksforgeeks.org/problems/count-triplets-with-sum-smaller-than-x554
 
 52. Merge Sorted Array
 https://leetcode.com/problems/merge-sorted-array/description/
+
+53. Find peak element in an array
+https://leetcode.com/problems/find-peak-element/
+
+54. Find Pivot in an array
+https://leetcode.com/problems/find-peak-element/
+
+55. Product array puzzle
+https://leetcode.com/problems/product-of-array-except-self/description/
 
 
 
