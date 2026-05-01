@@ -175,6 +175,20 @@ https://leetcode.com/problems/find-peak-element/
 55. Product array puzzle
 https://leetcode.com/problems/product-of-array-except-self/description/
 
+56. Sort Integers by The Number of 1 Bits
+https://leetcode.com/problems/sort-integers-by-the-number-of-1-bits/description/
+
+57. minimum no. of swaps required to sort the array
+https://www.geeksforgeeks.org/problems/minimum-swaps/1
+
+58. print all subarrays with 0 sum
+https://www.geeksforgeeks.org/problems/zero-sum-subarrays1825/1
+
+59. K-th Element of Two Sorted Arrays
+https://www.geeksforgeeks.org/problems/k-th-element-of-two-sorted-array1317/1
+
+
+
 
 
 
