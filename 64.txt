@@ -1,0 +1,23 @@
+In Java, String immutability means that once a String object is created, its value cannot be changed. If you try to modify a string, Java actually creates a brand-new String object in memory rather than altering the original.
+
+Here are the primary reasons why this design is used:
+
+1. The String Pool (Memory Efficiency)
+Java uses a special memory area called the String Constant Pool. To save space, different variables can point to the exact same string literal in memory. If strings were mutable, changing the value for one variable would accidentally change it for every other variable referencing that same memory address.
+
+2. Security
+Strings are frequently used to store sensitive data, such as database URLs, usernames, passwords, and file paths. If strings could be modified after being passed into a method, an untrusted piece of code could change these values (e.g., swapping a file path) after security checks have already been performed.
+
+3. Thread Safety
+Because they cannot change, strings are inherently thread-safe. Multiple threads can share the same string instance without the risk of one thread modifying the data while another is reading it, eliminating the need for complex synchronization.
+
+4. Cashing HashCodes
+Since a string's content never changes, its hashCode() only needs to be calculated once and can then be cached. This makes strings extremely fast when used as keys in collections like HashMap or HashSet, as the program doesn't have to recompute the hash every time the key is accessed.
+
+Quick Comparison
+
+String: Immutable (Thread-safe, slower for heavy modifications).
+
+StringBuilder: Mutable (Not thread-safe, faster for frequent changes).
+
+StringBuffer: Mutable (Thread-safe, used in multi-threaded environments).

@@ -187,7 +187,20 @@ https://www.geeksforgeeks.org/problems/zero-sum-subarrays1825/1
 59. K-th Element of Two Sorted Arrays
 https://www.geeksforgeeks.org/problems/k-th-element-of-two-sorted-array1317/1
 
+60. Trapping rain water
+https://leetcode.com/problems/trapping-rain-water/description/
 
+61. Longest Plindromic Substring
+https://leetcode.com/problems/longest-palindromic-substring/
+
+62. Reverse a String
+https://www.geeksforgeeks.org/problems/reverse-a-string/1
+
+63. String is Plindrome or not
+https://leetcode.com/problems/valid-palindrome/
+
+64. Why strings are immutable in Java?
+https://www.geeksforgeeks.org/java/java-string-is-immutable-what-exactly-is-the-meaning/
 
 
 
