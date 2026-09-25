@@ -1,9 +1,28 @@
 class Solution {
 public:
-    int fib(int n)
+
+    int solve(int n , vector<int> &dp)
     {
         if(n==1 or n==0)
             return n;
-        return fib(n-1) + fib(n-2);        
+        //step 3
+        if(dp[n] != -1)
+            return dp[n];
+        //step 2
+        dp[n] =  solve(n-1,dp) + solve(n-2,dp);
+        return dp[n];  
+
+    }
+    int fib(int n)
+    {
+        // step1 
+        vector<int> dp(n+1,-1);
+        solve(n,dp);
+
+        if(n==0 or n==1)
+            return n;
+
+        return dp[n];
+               
     }
 };
