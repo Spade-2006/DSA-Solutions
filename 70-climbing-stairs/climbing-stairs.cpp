@@ -4,8 +4,19 @@ public:
     {
         //step 1 
         vector<int> dp(stairs+1 , -1);
-        int ans = solve(stairs , 1 , dp) + solve(stairs , 2 , dp);
-        return ans;
+        //int ans = solve(stairs , 1 , dp) + solve(stairs , 2 , dp);
+
+        //step 2 tab
+        dp[stairs] = 1;
+
+        for(int i = stairs-1 ; i>=0 ; i--)
+        {
+            if(i == stairs-1)
+                dp[i] = dp[i+1];
+            else
+                dp[i] = dp[i+1] + dp[i+2];
+        }
+        return dp[0];
     }
 
     int solve(int &stairs , int i , vector<int> &dp)
