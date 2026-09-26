@@ -2,21 +2,25 @@ class Solution {
 public:
     int climbStairs(int stairs)
     {
-        //step 1 
-        vector<int> dp(stairs+1 , -1);
-        //int ans = solve(stairs , 1 , dp) + solve(stairs , 2 , dp);
-
-        //step 2 tab
-        dp[stairs] = 1;
-
+        int next1 = 1;
+        int next2 = 1; 
+        int curr;
         for(int i = stairs-1 ; i>=0 ; i--)
         {
             if(i == stairs-1)
-                dp[i] = dp[i+1];
+            {
+                curr = next1;
+                next2 = next1;
+                next1 = curr;
+            }
             else
-                dp[i] = dp[i+1] + dp[i+2];
+            {
+                curr = next1 + next2;
+                next2 = next1;
+                next1 = curr;
+            }
         }
-        return dp[0];
+        return curr;
     }
 
     int solve(int &stairs , int i , vector<int> &dp)
