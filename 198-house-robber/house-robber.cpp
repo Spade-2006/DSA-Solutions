@@ -2,20 +2,20 @@ class Solution {
 public:
     int rob(vector<int>& nums)
     {
-        //step1
+        
         int n = nums.size();
-        vector<int> dp(nums.size()+2,0);
+        int prevRob = 0;
+        int maxRob = 0;
         
 
         
-        for (int i = n - 1; i >= 0; i--)
+        for (int curr : nums)
         {
-            int robCurrent = nums[i] + dp[i + 2];
-            int skipCurrent = dp[i + 1];
-            dp[i] = max(robCurrent, skipCurrent);
-    
+            int temp = max(maxRob , prevRob + curr);
+            prevRob = maxRob;
+            maxRob = temp;
         }
-        return dp[0];
+        return maxRob;
 
         
     }
