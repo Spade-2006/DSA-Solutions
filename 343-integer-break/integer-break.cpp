@@ -4,26 +4,25 @@ public:
     {
         if (n == 2) return 1;
         if (n == 3) return 2;
-        vector<int> dp(n+1 , -1);
-        return solve(n,dp);
-    }
+        vector<int> dp(n+1 , 1);
 
-    int solve(int n , vector<int> &dp)
-    {
-        if (n <= 3)
-            return n;
+        dp[1] = 1;
+        dp[2] = 2;
+        dp[3] = 3;
+        for(int i = 4 ; i<=n ; i++)
+        {
+            int case1 = dp[i-2] * 2 ;
         
+            int case2 = dp[i-3] * 3 ;
 
-        
-        if(dp[n] != -1)
-            return dp[n];
-        int case1 = solve(n-2 , dp) * 2 ;
-        
-        int case2 = solve(n-3 , dp) * 3 ;
+            dp[i] =  max(case2 , case1);
 
-        dp[n] = max(case1,case2);
+        }
+
         return dp[n];
     }
+
+    
 
 
 };
