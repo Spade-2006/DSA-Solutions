@@ -10,14 +10,13 @@ public:
         int prev2 = 2;
         int prev1 = 3;
         
-        int ans = 0;
         for(int i = 4 ; i<=n ; i++)
         {
             long long case1 = prev2 * 2 ;
         
             long long case2 = prev3 * 3 ;
 
-            ans =  max(case2 , case1);
+            int ans =  max(case2 , case1);
 
             prev3 = prev2;
             prev2 = prev1;
