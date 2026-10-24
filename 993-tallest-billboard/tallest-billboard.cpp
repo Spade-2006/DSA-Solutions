@@ -1,55 +1,36 @@
 class Solution {
+    const int INF = 1e7;
 public:
-    int tallestBillboard(vector<int>& rods)
-    {
-        int n = rods.size();
+    int tallestBillboard(vector<int>& rods) {
         int sum = 0;
+        for (int r : rods) sum += r;
 
-        for(int i = 0 ;i<n ; i++)
-        {
-            sum += rods[i];
-        }
-
-        vector<vector<int>> dp(n+1 , vector<int>(sum+1 , -1) );
-        
-        int ans = solve(rods , 0 , 0 , 0 , dp);
-        return ans < 0 ? 0 : ans;
+        vector<vector<int>> dp(rods.size(), vector<int>(sum + 1, -1));
+        int ans = solve(rods, 0, 0, dp);
+        return max(0, ans);
     }
 
-    int solve(vector<int> &rods , int I , int II , int index , vector<vector<int>> &dp) 
-    {
-        if(index >= rods.size())
-        {
-            if(I == II)
-            {
-                return I;
-            }
-            return -1e7;
+    int solve(vector<int>& rods, int index, int diff, vector<vector<int>>& dp) {
+        if (index >= rods.size()) {
+            return (diff == 0) ? 0 : -INF;
         }
 
-        int diff = abs(I - II);
+        if (dp[index][diff] != -1) return dp[index][diff];
 
-        if(dp[index][diff] != -1)
-        {
-            if(dp[index][diff] == -1e7)
-                return -1e7;
-            return dp[index][diff] + min(I, II);
+        
+        int res = solve(rods, index + 1, diff, dp);
+
+        res = max(res, solve(rods, index + 1, diff + rods[index], dp));
+
+        
+        if (rods[index] <= diff) {
+            // Shorter billboard stays shorter or becomes equal
+            res = max(res, rods[index] + solve(rods, index + 1, diff - rods[index], dp));
+        } else {
+            // Shorter billboard becomes the new taller one
+            res = max(res, diff + solve(rods, index + 1, rods[index] - diff, dp));
         }
 
-        int case1 = solve(rods , I+rods[index] , II , index+1 , dp);
-        int case2 = solve(rods , I , II+rods[index] , index+1 , dp);
-        int case3 = solve(rods , I , II ,  index+1 , dp);
-
-        int best = max({case1, case2, case3});
-
-        if (best >= 0) {
-            dp[index][diff] = best - min(I, II);
-        }
-        else
-        {
-            dp[index][diff] = -1e7;
-        }
-
-        return best;
+        return dp[index][diff] = res;
     }
 };
