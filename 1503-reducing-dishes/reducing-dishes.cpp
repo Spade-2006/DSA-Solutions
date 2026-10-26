@@ -1,19 +1,20 @@
 class Solution {
 public:
-    int solve(vector<int>& p, int i, int time, vector<vector<int>>& dp) {
-        if (i == p.size()) return 0;
-        if (dp[i][time] != -1) return dp[i][time];
-
-        int inc = p[i] * (time + 1) + solve(p, i + 1, time + 1, dp);
-        int exc = solve(p, i + 1, time, dp);
-
-        return dp[i][time] = max(inc, exc);
-    }
-
     int maxSatisfaction(vector<int>& s) {
         sort(s.begin(), s.end());
         int n = s.size();
-        vector<vector<int>> dp(n + 1, vector<int>(n + 1, -1));
-        return solve(s, 0, 0, dp);
+
+        vector<vector<int>> dp(n + 1, vector<int>(n + 2, 0));
+
+        for (int i = n - 1; i >= 0; i--) {
+            for (int time = n; time >= 0; time--) {
+                int inc = s[i] * (time + 1) + dp[i + 1][time + 1];
+                int exc = dp[i + 1][time];
+
+                dp[i][time] = max(inc, exc);
+            }
+        }
+
+        return dp[0][0];
     }
 };
