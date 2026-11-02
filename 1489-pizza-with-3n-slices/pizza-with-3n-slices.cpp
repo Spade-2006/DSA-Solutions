@@ -7,7 +7,7 @@ public:
         vector<vector<int>> dp1(n + 2, vector<int>(k + 1, 0));
         vector<vector<int>> dp2(n + 2, vector<int>(k + 1, 0));
 
-        // Case 1: Exclude last element
+       
         for (int i = n - 2; i >= 0; i--) {
             for (int j = 1; j <= k; j++) {
 
@@ -19,7 +19,7 @@ public:
             }
         }
 
-        // Case 2: Exclude first element
+        
         for (int i = n - 1; i >= 1; i--) {
             for (int j = 1; j <= k; j++) {
 
