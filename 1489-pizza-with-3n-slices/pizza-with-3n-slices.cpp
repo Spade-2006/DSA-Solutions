@@ -4,27 +4,33 @@ public:
         int n = slices.size();
         int k = n / 3;
 
-        vector<vector<int>> dp1(n, vector<int>(k + 1, -1));
-        vector<vector<int>> dp2(n, vector<int>(k + 1, -1));
+        vector<vector<int>> dp1(n + 2, vector<int>(k + 1, 0));
+        vector<vector<int>> dp2(n + 2, vector<int>(k + 1, 0));
 
-        int first = solve(slices, 0, n - 2, k, dp1);
-        int last = solve(slices, 1, n - 1, k, dp2);
+        // Case 1: Exclude last element
+        for (int i = n - 2; i >= 0; i--) {
+            for (int j = 1; j <= k; j++) {
 
-        return max(first, last);
-    }
+                int eat = slices[i] + dp1[i + 2][j - 1];
 
-    int solve(vector<int>& slice, int i, int end,int k, vector<vector<int>>& dp) {
+                int notEat = dp1[i + 1][j];
 
-        if (k == 0) return 0;
+                dp1[i][j] = max(eat, notEat);
+            }
+        }
 
-        if (i > end) return INT_MIN;
+        // Case 2: Exclude first element
+        for (int i = n - 1; i >= 1; i--) {
+            for (int j = 1; j <= k; j++) {
 
-        if (dp[i][k] != -1) return dp[i][k];
+                int eat = slices[i] + dp2[i + 2][j - 1];
 
-        int eat = slice[i] + solve(slice, i + 2, end, k - 1, dp);
+                int notEat = dp2[i + 1][j];
 
-        int notEat = solve(slice, i + 1, end, k, dp);
+                dp2[i][j] = max(eat, notEat);
+            }
+        }
 
-        return dp[i][k] = max(eat, notEat);
+        return max(dp1[0][k], dp2[1][k]);
     }
 };
