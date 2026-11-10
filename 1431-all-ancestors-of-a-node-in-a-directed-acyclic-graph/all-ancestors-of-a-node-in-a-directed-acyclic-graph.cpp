@@ -16,27 +16,28 @@ public:
 
         for(int i = 0 ; i < n  ; i++)
         {
-            set<int> curr;
+            vector<int> curr;
             vector<bool> visited(n);
             dfs(adj , i ,  curr,visited);
-            vector<int> t(curr.begin() ,  curr.end());
-            ans[i] = t;
+            sort(curr.begin(),curr.end());
+            ans[i] = curr;
         }
 
         return ans;   
     }
 
-    void dfs(unordered_map<int,vector<int>> &adj , int i, set<int> &curr,vector<bool> &visited)
+    void dfs(unordered_map<int,vector<int>> &adj , int i, vector<int> &curr,vector<bool> &visited)
     {
         if(adj[i].empty())
             return;
-        visited[i] = true;
+        
 
         for(int n : adj[i])
         {
             if(!visited[n])
             {
-                curr.insert(n);
+                visited[n] = true;
+                curr.push_back(n);
                 dfs(adj , n , curr,visited);
             }
         }    
