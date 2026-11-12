@@ -24,14 +24,17 @@ public:
 
         int res = 0;
 
-        while (!q.empty()) {
+        while (!q.empty())
+        {
             int size = q.size();
 
-            for (int i = 0; i < size; i++) {
+            for (int i = 0; i < size; i++)
+            {
                 string gene = q.front();
                 q.pop();
 
-                if (gene == endGene) {
+                if (gene == endGene)
+                {
                     return res;
                 }
 
@@ -39,8 +42,10 @@ public:
                     string pattern = gene;
                     pattern[j] = '*';
 
-                    for (const string& neiGene : nei[pattern]) {
-                        if (visit.find(neiGene) == visit.end()) {
+                    for (const string& neiGene : nei[pattern])
+                    {
+                        if (visit.find(neiGene) == visit.end())
+                        {
                             visit.insert(neiGene);
                             q.push(neiGene);
                         }
