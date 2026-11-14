@@ -14,7 +14,7 @@ public:
                 int u = edge[0];
                 int v = edge[1];   
                 int cost = edge[2];
-                if (dist[u] != INT_MAX && dist[u] + cost < temp_prices[v])
+                if (dist[u] != INF && dist[u] + cost < temp_prices[v])
                 {
                     temp_prices[v] = dist[u] + cost;
                 }         
