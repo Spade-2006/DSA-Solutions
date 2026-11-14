@@ -5,30 +5,20 @@ public:
         vector<int> dist(n, INF);        
         dist[src] = 0;
 
-        
-         for (int i = 0; i < k+1; i++)
-        {
+        for (int i = 0; i < k + 1; i++) {
             vector<int> temp_prices = dist;            
-            for (auto edge : flights)            
-            {
+            for (const auto& edge : flights) {
                 int u = edge[0];
                 int v = edge[1];   
                 int cost = edge[2];
-                if (dist[u] != INF && dist[u] + cost < temp_prices[v])
-                {
+                
+                if (dist[u] != INF && dist[u] + cost < temp_prices[v]) {
                     temp_prices[v] = dist[u] + cost;
                 }         
             }  
             dist = temp_prices;     
         }
 
-
-       return dist[dst] == INF ? -1 : dist[dst];
-
-
-
-
-
-        
+        return dist[dst] == INF ? -1 : dist[dst];
     }
 };
