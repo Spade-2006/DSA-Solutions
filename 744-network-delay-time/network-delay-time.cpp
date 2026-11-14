@@ -2,42 +2,35 @@ class Solution {
 public:
     int networkDelayTime(vector<vector<int>>& times, int n, int k)
     {
-        unordered_map<int, vector<pair<int, int>>> adj;
+        // 1. Direct vector indexing instead of unordered_map
+        vector<vector<pair<int, int>>> adj(n + 1);
 
-        for (auto& edge : times)
+        for (const auto& edge : times)
         {
-            int u = edge[0];
-            int v = edge[1];
-            int wt = edge[2];
-
-            adj[u].push_back({v, wt});
+            adj[edge[0]].push_back({edge[1], edge[2]});
         }
 
-        set<pair<int, int>> st;
+        // 2. Min-heap (priority_queue) instead of std::set
+        priority_queue<pair<int, int>, vector<pair<int, int>>, greater<pair<int, int>>> pq;
         vector<int> dist(n + 1, 1e9);
 
         dist[k] = 0;
-        st.insert({0, k});
+        pq.push({0, k});
 
-        while (!st.empty())
+        while (!pq.empty())
         {
-            auto it = *(st.begin());
-            int d = it.first;
-            int node = it.second; 
-            st.erase(it);
+            auto [d, node] = pq.top();
+            pq.pop();
 
-            for (auto& edge : adj[node])
+            // Skip stale entries
+            if (d > dist[node]) continue;
+
+            for (const auto& [adjNode, wt] : adj[node])
             {
-                int adjNode = edge.first;                
-                int wt = edge.second;                
                 if (d + wt < dist[adjNode])
-                {                    
-                    if (dist[adjNode] != 1e9)
-                    {                        
-                        st.erase({dist[adjNode], adjNode});                    
-                    }
-                    dist[adjNode] = d + wt;                    
-                    st.insert({dist[adjNode], adjNode});                
+                {
+                    dist[adjNode] = d + wt;
+                    pq.push({dist[adjNode], adjNode});
                 }
             }
         }
@@ -45,10 +38,7 @@ public:
         int ans = 0;
         for (int i = 1; i <= n; i++)
         {
-            if (dist[i] == 1e9)
-            {
-                return -1;
-            }
+            if (dist[i] == 1e9) return -1;
             ans = max(ans, dist[i]);
         }
 
