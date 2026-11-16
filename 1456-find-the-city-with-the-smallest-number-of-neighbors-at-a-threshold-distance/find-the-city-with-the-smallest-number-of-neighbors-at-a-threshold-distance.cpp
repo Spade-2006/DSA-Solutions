@@ -41,7 +41,7 @@ public:
             int curr = 0;
             for (int j = 0; j < n; j++)
             {
-                if (i != j && adj[i][j] <= d)
+                if (adj[i][j] <= d)
                 {
                     curr++;
                 }
