@@ -10,10 +10,14 @@ public:
         for (int r = 0; r < n; r++) {
             sum += nums[r];
 
-            while (l < r && (nums[l] == 0 || sum > goal)) {
-                if (nums[l] == 0) {
+            while (l < r && (nums[l] == 0 || sum > goal))
+            {
+                if (nums[l] == 0)
+                {
                     zeros++;
-                } else {
+                }
+                else
+                {
                     zeros = 0;
                 }
                 sum -= nums[l];
