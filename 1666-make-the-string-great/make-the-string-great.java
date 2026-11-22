@@ -1,13 +1,31 @@
 class Solution {
-	 public String makeGood(String s) {
-        for (int i = 0; i < s.length() - 1; i++)
+	 public String makeGood(String s)
+     {
+        int n = s.length();
+
+        Stack<Character> st = new Stack<>();
+        for (int i = 0; i < n; i++)
         {
-            
-            if (Math.abs(s.charAt(i) - s.charAt(i+1)) == 32)
-            {  
-                return makeGood(s.substring(0, i) + s.substring(i+2));
+            char ch = s.charAt(i);
+
+            if (!st.isEmpty() && Math.abs(st.peek() - ch) == 32)
+            {
+                st.pop();
             }
-        }     
-        return s;
+            else
+            {
+                st.push(ch);
+            }
+        }
+
+        StringBuilder sb = new StringBuilder();
+
+        for (char ch : st)
+        {
+                sb.append(ch);
+        }
+
+        return sb.toString();
+        
     }
 }
