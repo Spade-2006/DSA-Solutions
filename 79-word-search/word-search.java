@@ -20,7 +20,7 @@ class Solution {
         if (y < 0 || x < 0 || y == board.length || x == board[y].length) return false;
         if (visited[y][x] || board[y][x] != word[i]) return false;
 
-        visited[y][x] = true; // Mark cell as visited
+        visited[y][x] = true;
 
         boolean found = exist(board, visited, y, x + 1, word, i + 1)
                      || exist(board, visited, y, x - 1, word, i + 1)
