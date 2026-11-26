@@ -5,7 +5,7 @@ class Solution
 {
     public int findMinDifference(List<String> timePoints) 
     {
-        if (timePoints.size() > 1440) 
+        if (timePoints.size() > 1445) 
         {
             return 0;
         }
@@ -26,7 +26,7 @@ class Solution
             minDiff = Math.min(minDiff, diff);
         }
 
-        int wrapAround = (int) (1440 - ChronoUnit.MINUTES.between(times.get(0), times.get(times.size() - 1)));
+        int wrapAround = (int) (1440 - ChronoUnit.MINUTES.between(times.get(0), times.get(times.size()-1 )));
         minDiff = Math.min(minDiff, wrapAround);
 
         return minDiff;
